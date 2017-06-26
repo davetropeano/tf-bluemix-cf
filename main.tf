@@ -1,7 +1,6 @@
 provider "ibmcloud" {
-  ibmid = "${var.ibmid}"
-  ibmid_password = "${var.ibmidpw}"
-  softlayer_account_number = "${var.slaccountnum}"
+      bluemix_api_key    = "${var.ibmcloud_bx_api_key}"
+      skip_service_configuration = "softlayer"
 }
 
 data "ibmcloud_cf_space" "spacedata" {
@@ -23,20 +22,7 @@ resource "ibmcloud_cf_service_key" "serviceKey" {
 }
 
 # Required for the IBM Cloud provider
-variable ibmid {
-  type = "string"
-  description = "Your IBM-ID."
-}
-# Required for the IBM Cloud provider
-variable ibmidpw {
-  type = "string"
-  description = "The password for your IBM-ID."
-}
-# Required to target the correct SL account
-variable slaccountnum {
-  type = "string"
-  description = "Your Softlayer account number."
-}
+variable "ibmcloud_bx_api_key" {}
 
 variable "space" {
   default = "dev"
