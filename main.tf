@@ -52,3 +52,7 @@ variable "service_key_name" {
 output "guid" {
   value = "${ibmcloud_cf_service_instance.service-instance.id}"
 }
+
+output "credentials" {
+      value = "${ibmcloud_cf_service_key.credentials}"
+}
