@@ -54,5 +54,5 @@ output "guid" {
 }
 
 output "credentials" {
-      value = "${ibmcloud_cf_service_key.credentials}"
+      value = "${ibmcloud_cf_service_key.serviceKey.credentials}"
 }
