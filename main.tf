@@ -1,6 +1,6 @@
 provider "ibmcloud" {
       bluemix_api_key    = "${var.ibmcloud_bx_api_key}"
-      skip_service_configuration = ["softlayer","cluster"]
+      #skip_service_configuration = ["softlayer","cluster"]
 }
 
 data "ibmcloud_cf_space" "spacedata" {
