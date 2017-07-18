@@ -1,4 +1,4 @@
-provider "ibmcloud" {
+provider "ibm" {
       bluemix_api_key    = "${var.ibmcloud_bx_api_key}"
       #skip_service_configuration = ["softlayer","cluster"]
 }
